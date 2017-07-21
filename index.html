@@ -1,30 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>ZeroMusic</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/all.css" />
-  </head>
-  <body>
+
+    <base href="" target="_top" id="base">
+    <script>
+        base.href = document.location.href.replace("/media", "").replace("index.html", "").replace(/[&?]wrapper=False/, "").replace(/[&?]wrapper_nonce=[A-Za-z0-9]+/, "")
+    </script>
+</head>
+
+<body>
+    <!-- <iframe id="playerC" src=""></iframe> -->
+
+
+
     <div id="top">
-      <a href="#Select+user" id="select_user" onclick='return page.selectUser()'>Select user</a>
-      <input type="file" onchange='return page.updateMetadata(this)' id="fileField"/>
-      <label for="artistField">Artist</label><input type="text" id="artistField" />
-      <label for="titleField">Title</label><input type="text" id="titleField" />
-      <input type="hidden" id="trackField" />
-      <input type="button" value="Upload" onclick="page.uploadSong(document.getElementById('fileField'))" />
-      <audio id="player" controls></audio>
+        <a href="#Select+user" id="select_user" onclick='return page.selectUser()'>Select user</a>
+        <input type="file" onchange='return page.updateMetadata(this)' id="fileField" />
+        <label for="artistField">Artist</label><input type="text" id="artistField" />
+        <label for="titleField">Title</label><input type="text" id="titleField" />
+        <input type="hidden" id="trackField" />
+        <input type="button" value="Upload" onclick="page.uploadSong(document.getElementById('fileField'))" />
+
+        <!-- <audio id="player" controls></audio> -->
     </div>
+
+    <div class="container">
+        <div class="player">
+            <div class="like waves-effect waves-light">
+                <i class="icon-heart"></i>
+            </div>
+            <div class="mask"></div>
+            <ul class="player-info info-one">
+                <li>Rock'n'Roll Nerd</li>
+                <li>Tim Minchin</li>
+                <li>5:34</li>
+            </ul>
+            <ul class="player-info info-two">
+                <li>Rock'n'Roll Nerd</li>
+                <li>Tim Minchin</li>
+                <li><span id="duration"></span><i> / </i>5:34</li>
+            </ul>
+            <div id="play-button" class="unchecked">
+                <i class="icon icon-play"></i>
+            </div>
+            <div class="control-row">
+                <div class="waves-animation-one"></div>
+                <div class="waves-animation-two"></div>
+                <div id="pause-button">
+                    <i class="icon"></i>
+                </div>
+                <div class="seek-field">
+                    <input id="audioSeekBar" min="0" max="334" step="1" value="0" type="range" oninput="audioSeekBar()" onchange="this.oninput()">
+                </div>
+                <div class="volume-icon">
+                    <i class="icon-volume-up"></i>
+                </div>
+                <div class="volume-field">
+                    <input type="range" min="0" max="100" value="100" step="1" oninput="audio.volume = this.value/100" onchange="this.oninput()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="player" ontimeupdate="SeekBar()" ondurationchange="CreateSeekBar()"><!--preload="auto" loop-->
+    </audio>
+
     <div id="container">
-      <div id="artists">
-	<h2 onclick='page.resetFilter()'>Artists</h2>
-	<ul></ul>
-      </div>
-      <div id="songs">
-	<h2>Songs</h2>
-	<ul></ul>
-      </div>
+        <div id="artists">
+            <h2 onclick='page.resetFilter()'>Artists</h2>
+            <ul></ul>
+        </div>
+        <div id="songs">
+            <h2>Songs</h2>
+            <ul></ul>
+        </div>
     </div>
-  </body>
-  <script type="text/javascript" src="js/all.js"></script>
+</body>
+
+<script>
+    window.onload = function() {
+        // pC = document.getElementById("player")
+
+        // pC.crossOrigin = "null";
+
+        //     pC = document.getElementById("playerC");
+        // pC.src = "/186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf/data/users/14K7EydgyeP84L1NKaAHBZTPQCev8BbqCy/2.mp3" + document.location.href.replace("/media", "").replace("index.html", "").match(/[&?]wrapper_nonce=[A-Za-z0-9]+/);
+        //     pCdoc = pC.contentDocument || pC.contentWindow.document;
+        //     p = pCdoc.getElementsByName("media");
+        //     p.pause();
+    }
+</script>
+
+<script type="text/javascript" src="js/all.js"></script>
+
 </html>

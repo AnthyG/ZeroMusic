@@ -1,5 +1,5 @@
 {
- "address": "1MusicXkuN2pk5hRdmroeyaCLDJtzTicpB",
+ "address": "186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf",
  "description": "",
  "files": {
   "README.md": {
@@ -7,8 +7,8 @@
    "size": 588
   },
   "css/all.css": {
-   "sha512": "756c6a134f7492f7ee8175580d9ecf6bc51239d156e9d4d714cff378f7bf14c8",
-   "size": 1255
+   "sha512": "e85bfd75ef135f7a000618ce18aa30c2e1fdf25f8da0a846678bb705dd481915",
+   "size": 55673
   },
   "dbschema.json": {
    "sha512": "34a7cf7156d9fd390b97e54f8a0dd5cba391c2c5e6510e11d6483af3d8345d46",
@@ -19,19 +19,19 @@
    "size": 548
   },
   "index.html": {
-   "sha512": "a81f76112c1a9c61a8c353cad5e7843b4360e594bd0216ec837f8349f0eb691e",
-   "size": 1006
+   "sha512": "debc4321a6c8a27f2300a87afb570259a8ff19c604b9b25237c93d0d9c2904e8",
+   "size": 3621
   },
   "js/all.js": {
-   "sha512": "948e97cc235995ba87ada20a64bef665a0dd54dd44a5b2e41265451ab123481b",
-   "size": 13568
+   "sha512": "d716bbbb6ad11236345dadf24e75e9b20c6d5e45f656fac86313dcd5c0eee192",
+   "size": 107792
   },
   "languages/fr.json": {
    "sha512": "7d761e050dd81dd84b7d32fe576cd6fe53f3178021b4d34612fff6ea670b29a1",
    "size": 166
   }
  },
- "ignore": "(^\\.git(ignore)?|(js|css)/(?!all)(.*)\\.(js|css)|data|.*(\\.coffee|~)$)",
+ "ignore": "(^\\.git(ignore)?|(js|css)/(?!all)(.*)\\.(js|css)|data|.*(\\.coffee|~)$)|disabled/.*",
  "includes": {
   "data/users/content.json": {
    "signers": [],
@@ -39,20 +39,14 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1491651202,
+ "modified": 1500647250,
  "repository": "https://github.com/Emeraude/ZeroMusic",
- "sign": [
-  69937416518806067325064538784543040455877369252615170442231422985159147861361,
-  97114821427143775316191066272591090334964397011915217488811654164598242032360
- ],
- "signers_sign": "G50lK79M6vT+mUyolvVvfs4Lr2edan0DQDn5CC1ICA5BwgJ8qrvwo0dRkmewQwsK6Plh/5xB+ZNUbZuuPKPbrn0=",
+ "signers_sign": "G1QtZl8oHEKLYqxZohzWtSn6tIxyo5DLydD2V3koHdLSBr6hqWWjAvxtr7z8N9xRWkF3nqV/bbFYnuyf++AvQHc=",
  "signs": {
-  "1MusicXkuN2pk5hRdmroeyaCLDJtzTicpB": "GwgzLnEMCaj0uiTwMH4nAGB/gPg1bDCve8P1MvvPa31t0vIqIHdATv9T+k7TLLyKG1klf9aFvpH38fFNX/CRoms="
+  "186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf": "G0Hx5JDMW+odgWS+0z0EhpqY+TeGfVdqEaJhN/cXgxMKRf5QYskyaCVnYvtp7i/1Hwvnt+ghx0VSlPH7fiHaeSo="
  },
  "signs_required": 1,
  "title": "ZeroMusic",
- "translate": [
-  "index.html"
- ],
- "zeronet_version": "0.5.3"
+ "translate": ["index.html"],
+ "zeronet_version": "0.5.7"
 }

@@ -1,17 +1,15 @@
 {
- "address": "1MusicXkuN2pk5hRdmroeyaCLDJtzTicpB",
+ "address": "186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf",
  "files": {},
  "ignore": ".*",
  "inner_path": "data/users/content.json",
- "modified": 1491651128,
+ "modified": 1500647263,
  "signs": {
-  "1MusicXkuN2pk5hRdmroeyaCLDJtzTicpB": "G5TTHRdLgiOy02ubHTPnprywNEHVEcMo7xbJ0e2gBm9CbwmA2ltlMtzfThTuiionA9Jki0aHXaLZX0BhUF1CUhA="
+  "186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf": "HKOw+NbA8MYwKwwcZ+9jkjZYMYjpygIinw0R4J3QvL6nANz23dO2zXXmbAYLwFsrG9Iz9S3wJAIi1RNTFbQ8ztU="
  },
  "user_contents": {
   "cert_signers": {
-   "zeroid.bit": [
-    "1iD5ZQJMNXu43w1qLB8sfdHVKppVMduGz"
-   ]
+   "zeroid.bit": ["1iD5ZQJMNXu43w1qLB8sfdHVKppVMduGz"]
   },
   "permission_rules": {
    ".*": {

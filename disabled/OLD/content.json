@@ -1,0 +1,30 @@
+{
+ "address": "186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf",
+ "address_index": 64833330,
+ "background-color": "#FFF",
+ "clone_root": "template-new",
+ "cloned_from": "1HeLLo4uzjaLetFx6NH3PMwFP3qbRbTf3D",
+ "description": "",
+ "files": {
+  "index.html": {
+   "sha512": "542f7724432a22ceb8821b4241af4d36cfd81e101b72d425c6c59e148856537e",
+   "size": 1114
+  },
+  "js/ZeroFrame.js": {
+   "sha512": "090a43d18dcd1aa836b0d160631fe958f9fabd761af712e8eed6f7e010c0dd76",
+   "size": 2409
+  }
+ },
+ "ignore": "",
+ "inner_path": "content.json",
+ "modified": 1500638862,
+ "postmessage_nonce_security": true,
+ "signers_sign": "G1QtZl8oHEKLYqxZohzWtSn6tIxyo5DLydD2V3koHdLSBr6hqWWjAvxtr7z8N9xRWkF3nqV/bbFYnuyf++AvQHc=",
+ "signs": {
+  "186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf": "G9E4wY8gbUlHnGn840BtT3w6IC5/3QfMpRfMhCB+DuS8DE5iRRvrRr4h63YhnVKaZOiIK3ZjldNawjevRZDutQU="
+ },
+ "signs_required": 1,
+ "title": "my new site",
+ "translate": ["js/all.js"],
+ "zeronet_version": "0.5.7"
+}

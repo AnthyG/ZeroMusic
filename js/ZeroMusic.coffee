@@ -8,10 +8,16 @@ class ZeroMusic extends ZeroFrame
     @artistsList = [];
     @songsList = [];
     @currentFilter = null;
-    @cmd "site_info", {}, (site_info) =>
+    @cmd "siteInfo", {}, (site_info) =>
       @siteInfo = site_info
       if @siteInfo.cert_user_id
         document.getElementById("select_user").innerText = @siteInfo.cert_user_id
+      
+      if @siteInfo.settings.permissions.indexOf("Cors:186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf") < 0
+        @cmd "corsPermission", "186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf", () =>
+          console.log("Got CORS-Permission")
+      else
+        console.log("Already have CORS-Permission")
     @cmd "dbQuery", ["SELECT * FROM songs ORDER BY artist COLLATE NOCASE ASC, title COLLATE NOCASE ASC"], (res) =>
       @addSong file for file in res
       @updateLists()
@@ -32,11 +38,34 @@ class ZeroMusic extends ZeroFrame
 
   removeSong: (file) =>
     @cmd "optionalFileDelete", file
+  
+  playSongR: (file) =>
+    loadR(file)
+    # $.ajax({
+    #   "url": "/186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf/" + file,
+    #   "success": (data) => {
+    #     console.log(data)
+    #   }
+    # });
+    # @player.innerHTML = '<source src="/186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf/' + file + '" />'
+    # @player.load();
+    # @player.play();
 
   playSong: (file) =>
     @player.innerHTML = '<source src="' + file + '" />'
     @player.load();
     @player.play();
+
+    # loadR(file)
+
+    # console.log(file)
+    # if page.siteInfo.settings.permissions.indexOf("Cors:186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf/" + file) < 0
+    #   @cmd "corsPermission", "186unjYTKeFSPKJW43ZPb5jnDgqtzxCRKf/" + file, () =>
+    #     console.log("Got CORS-Permission")
+    #     page.playSongR(file)
+    # else
+    #   console.log("Already have CORS-Permission")
+      # page.playSongR(file)
 
   addSong: (song) =>
     if (@artistsList.findIndex (e) =>
